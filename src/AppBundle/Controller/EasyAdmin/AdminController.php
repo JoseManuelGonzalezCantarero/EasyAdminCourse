@@ -9,7 +9,7 @@ class AdminController extends BaseAdminController
 
     public function changePublishedStatusAction()
     {
-        $id     = $this->request->query->get('id');
+        $id = $this->request->query->get('id');
         $entity = $this->em->getRepository('AppBundle:Genus')->find($id);
 
         $entity->setIsPublished(! $entity->getIsPublished());
@@ -22,7 +22,7 @@ class AdminController extends BaseAdminController
         return $this->redirectToRoute('easyadmin', [
             'action' => 'show',
             'entity' => $this->request->query->get('entity'),
-            'id'     => $id,
+            'id' => $id,
         ]);
     }
 }
