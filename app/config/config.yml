@@ -122,7 +122,7 @@ easy_admin:
                     - { property: 'funFact', type: 'textarea' }
                     - isPublished
                     - { property: 'firstDiscoveredAt', type_options: { widget: 'single_text' }}
-                    - subFamily
+                    - { property: 'subFamily', type: 'easyadmin_autocomplete' }
                     - genusScientists
             new:
                 fields:
