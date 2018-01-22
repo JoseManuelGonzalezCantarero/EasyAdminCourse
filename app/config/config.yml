@@ -112,6 +112,27 @@ easy_admin:
                 fields: ['id', 'name']
 #            templates:
 #                field_id: 'admin/fields/_id.html.twig'
+            form:
+                fields:
+                    -
+                        property: id
+                        type_options: { disabled: true }
+                    - name
+                    - speciesCount
+                    - { property: 'funFact', type: 'textarea' }
+                    - isPublished
+                    - { property: 'firstDiscoveredAt', type_options: { widget: 'single_text' }}
+                    - subFamily
+                    - genusScientists
+            new:
+                fields:
+                    - '-id'
+            edit:
+                fields:
+                    -
+                        property: 'slug'
+                        help: 'unique auto-generated value'
+                        type_options: { disabled: true }
         GenusHorde:
             class: AppBundle\Entity\Genus
             label: HORDE of Genuses 😱 !!!
