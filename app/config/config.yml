@@ -94,7 +94,7 @@ easy_admin:
             - easy_admin/_form_theme.html.twig
     list:
         title: 'List of %%entity_label%%'
-        actions: ['show']
+        actions: ['show', 'export']
     entities:
         Genus:
             class: AppBundle\Entity\Genus
