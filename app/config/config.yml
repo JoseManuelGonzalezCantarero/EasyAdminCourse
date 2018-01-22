@@ -98,6 +98,7 @@ easy_admin:
     entities:
         Genus:
             class: AppBundle\Entity\Genus
+            controller: AppBundle\Controller\EasyAdmin\GenusController
             label: Genuses
             help: Genuses are not covered under warranty!
             list:
@@ -181,6 +182,7 @@ easy_admin:
             disabled_actions: ['show']
         User:
             class: AppBundle\Entity\User
+            controller: AppBundle\Controller\EasyAdmin\UserController
             list:
                 fields:
                     - id
