@@ -86,6 +86,7 @@ easy_admin:
             css: ['css/custom_backend.css']
     list:
         title: 'List of %%entity_label%%'
+        actions: ['show']
     entities:
         Genus:
             class: AppBundle\Entity\Genus
@@ -93,6 +94,9 @@ easy_admin:
             help: Genuses are not covered under warranty!
             list:
                 help: Do not feed!
+                actions:
+                    - { name: 'edit', icon: 'pencil', label: 'Edit' }
+                    - { name: 'show', icon: 'info-circle', label: '' }
             search:
                 help: null
         GenusNote:
@@ -102,5 +106,8 @@ easy_admin:
                 title: List of notes
         SubFamily:
             class: AppBundle\Entity\SubFamily
+            list:
+                actions: ['-show']
+            disabled_actions: ['show']
         User:
             class: AppBundle\Entity\User
