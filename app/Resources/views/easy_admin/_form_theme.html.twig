@@ -1,0 +1,15 @@
+{% block _genus_genusScientists_widget %}
+    <table class="table">
+        <tbody>
+            {% for genusScientist in easyadmin.item.genusScientists %}
+                <tr>
+                    <td>{{ genusScientist.user }}</td>
+                    <td>{{ genusScientist.yearsStudied }} years</td>
+                    <td>
+                        <a href="#" class="js-delete-scientist" data-url="">&times;</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
