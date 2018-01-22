@@ -84,8 +84,23 @@ easy_admin:
         brand_color: '#81b9ba'
         assets:
             css: ['css/custom_backend.css']
+    list:
+        title: 'List of %%entity_label%%'
     entities:
-        - AppBundle\Entity\Genus
-        - AppBundle\Entity\GenusNote
-        - AppBundle\Entity\SubFamily
-        - AppBundle\Entity\User
+        Genus:
+            class: AppBundle\Entity\Genus
+            label: Genuses
+            help: Genuses are not covered under warranty!
+            list:
+                help: Do not feed!
+            search:
+                help: null
+        GenusNote:
+            class: AppBundle\Entity\GenusNote
+            label: Genus Notes
+            list:
+                title: List of notes
+        SubFamily:
+            class: AppBundle\Entity\SubFamily
+        User:
+            class: AppBundle\Entity\User
