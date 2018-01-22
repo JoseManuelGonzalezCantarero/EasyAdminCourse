@@ -112,6 +112,12 @@ easy_admin:
             label: Genus Notes
             list:
                 title: List of notes
+                fields:
+                    - id
+                    - username
+                    - { property: 'userAvatarFilename', label: 'User avatar', type: 'image', base_path: '/images/' }
+                    - createdAt
+                    - genus
         SubFamily:
             class: AppBundle\Entity\SubFamily
             list:
@@ -119,3 +125,10 @@ easy_admin:
             disabled_actions: ['show']
         User:
             class: AppBundle\Entity\User
+            list:
+                fields:
+                    - id
+                    - { property: 'email', type: 'email' }
+                    - { property: 'isScientist', label: 'Is scientist?', type: 'boolean' }
+                    - fullName
+                    - { property: 'avatarUri', type: 'url' }
