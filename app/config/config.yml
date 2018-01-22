@@ -84,6 +84,9 @@ easy_admin:
         brand_color: '#81b9ba'
         assets:
             css: ['css/custom_backend.css']
+            js:
+                - 'https://unpkg.com/snarkdown@1.2.2/dist/snarkdown.umd.js'
+                - 'js/custom_backend.js'
         templates:
             field_id: 'admin/fields/_id.html.twig'
     list:
@@ -119,7 +122,7 @@ easy_admin:
                         type_options: { disabled: true }
                     - name
                     - speciesCount
-                    - { property: 'funFact', type: 'textarea' }
+                    - { property: 'funFact', type: 'textarea', css_class: 'js-markdown-input' }
                     - isPublished
                     - { property: 'firstDiscoveredAt', type_options: { widget: 'single_text' }}
                     - { property: 'subFamily', type: 'easyadmin_autocomplete' }
