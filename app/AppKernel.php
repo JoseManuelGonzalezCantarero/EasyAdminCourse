@@ -1,5 +1,6 @@
 <?php
 
+use JavierEguiluz\Bundle\EasyAdminBundle\EasyAdminBundle;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
@@ -20,7 +21,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineCacheBundle\DoctrineCacheBundle(),
             new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-
+            new EasyAdminBundle(),
             new AppBundle\AppBundle(),
         );
 

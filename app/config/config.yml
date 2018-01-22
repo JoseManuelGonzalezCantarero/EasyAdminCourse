@@ -77,3 +77,10 @@ stof_doctrine_extensions:
     orm:
         default:
             sluggable: true
+
+easy_admin:
+    entities:
+        - AppBundle\Entity\Genus
+        - AppBundle\Entity\GenusNote
+        - AppBundle\Entity\SubFamily
+        - AppBundle\Entity\User
