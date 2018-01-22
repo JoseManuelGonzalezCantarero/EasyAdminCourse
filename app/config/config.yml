@@ -145,5 +145,5 @@ easy_admin:
                     - id
                     - { property: 'email', type: 'email' }
                     - { property: 'isScientist', label: 'Is scientist?', type: 'boolean' }
-                    - fullName
+                    - { property: 'fullName', template: '_field_user_full_name.html.twig' }
                     - { property: 'avatarUri', type: 'url' }
