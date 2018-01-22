@@ -123,7 +123,14 @@ easy_admin:
                     - isPublished
                     - { property: 'firstDiscoveredAt', type_options: { widget: 'single_text' }}
                     - { property: 'subFamily', type: 'easyadmin_autocomplete' }
-                    - genusScientists
+                    -
+                        property: 'genusScientists'
+                        type: 'collection'
+                        type_options:
+                            entry_type: AppBundle\Form\GenusScientistEmbeddedForm
+                            allow_delete: true
+                            allow_add: true
+                            by_reference: false
             new:
                 fields:
                     - '-id'
@@ -168,3 +175,10 @@ easy_admin:
                     - { property: 'isScientist', label: 'Is scientist?', type: 'boolean' }
                     - { property: 'fullName', template: '_field_user_full_name.html.twig' }
                     - { property: 'avatarUri', type: 'url' }
+            form:
+                fields:
+                    - email
+                    - isScientist
+                    - { property: 'fullName', type: 'text', help: 'First then Last' }
+                    - avatarUri
+                    - universityName
