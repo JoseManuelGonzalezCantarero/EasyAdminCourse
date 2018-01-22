@@ -8,6 +8,6 @@ homepage:
         _controller: AppBundle:Main:homepage
 
 easy_admin_bundle:
-    resource: "@EasyAdminBundle/Controller/"
+    resource: "@AppBundle/Controller/EasyAdmin/AdminController.php"
     type: annotation
     prefix: /easyadmin
