@@ -79,6 +79,11 @@ stof_doctrine_extensions:
             sluggable: true
 
 easy_admin:
+    site_name: 'Aqua<i>Note</i>'
+    design:
+        brand_color: '#81b9ba'
+        assets:
+            css: ['css/custom_backend.css']
     entities:
         - AppBundle\Entity\Genus
         - AppBundle\Entity\GenusNote
