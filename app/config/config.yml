@@ -92,6 +92,13 @@ easy_admin:
         form_theme:
             - horizontal
             - easy_admin/_form_theme.html.twig
+        menu:
+            - { label: 'Dashboard', route: 'admin_dashboard', default: true }
+            - User
+            - Genus
+            - GenusHorde
+            - GenusNote
+            - SubFamily
     list:
         title: 'List of %%entity_label%%'
         actions: ['show', 'export']
